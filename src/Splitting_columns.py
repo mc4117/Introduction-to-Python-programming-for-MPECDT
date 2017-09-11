@@ -14,14 +14,14 @@ y = []
 # Loop to perform sum
 for number in infile:
     a = (number.split("       "))
-    # xy = map(float, line.split())
+    # xy = tuple(map(float, line.split()))
     x.append(float(a[0]))
     y.append(float(a[1]))
 
-x_array = np.array(x)
+x_array = np.array(x) # normally put x = np.array(x)
 y_array = np.array(y)
 
 pylab.plot(x_array,y_array)
 
-print(np.min(y))
-print(np.max(y))
+print(np.min(y_array))
+print(np.max(y_array))
